@@ -1327,22 +1327,21 @@
 			</div>
 		</div>
 
+		<!-- Acceso privado presupuestos -->
+		<div style="text-align:center;padding:0 0 16px;">
+			<button onclick="accederPresupuestos()" style="
+				background:transparent;border:none;color:transparent;
+				font-size:.55rem;font-weight:700;letter-spacing:.18em;
+				text-transform:uppercase;padding:8px 18px;border-radius:3px;
+				cursor:pointer;transition:color .3s,background .3s;font-family:inherit;
+			" onmouseover="this.style.color='#87c6bd';this.style.background='rgba(135,198,189,.08)'"
+			   onmouseout="this.style.color='transparent';this.style.background='transparent'">
+				· · ·
+			</button>
+		</div>
 	</div>
 </section>
 			</div>
-
-		<!-- Acceso privado presupuestos -->
-	<div style="text-align:center;padding:20px 0 8px;">
-		<button id="btnPrivado" onclick="accederPresupuestos()" style="
-			background:transparent;border:none;color:transparent;
-			font-size:.55rem;font-weight:700;letter-spacing:.18em;
-			text-transform:uppercase;padding:8px 18px;border-radius:3px;
-			cursor:pointer;transition:color .3s,background .3s;font-family:inherit;
-		" onmouseover="this.style.color='#87c6bd';this.style.background='rgba(135,198,189,.08)'"
-		   onmouseout="this.style.color='transparent';this.style.background='transparent'">
-			· · ·
-		</button>
-	</div>
 	<script>
 		function accederPresupuestos() {
 			var pw = prompt('Contraseña:');
