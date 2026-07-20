@@ -299,7 +299,6 @@
 					<li><a href="#gems">Quienes somos</a></li>
 					<li><a href="#work">Productos</a></li>
 					<li><a href="#contact">Contacto</a></li>
-					<li><a href="https://tu-rai-presupuestos.vercel.app">Presupuestos</a></li>
 				</ul>
 				<a href="#" class="main-nav-trigger">
 					<i class="icon icon--burger"></i>
@@ -1332,7 +1331,30 @@
 </section>
 			</div>
 
-		<div class="overlay overlay-imprint" id="imprint">
+		<!-- Acceso privado presupuestos -->
+	<div style="text-align:center;padding:20px 0 8px;">
+		<button id="btnPrivado" onclick="accederPresupuestos()" style="
+			background:transparent;border:none;color:transparent;
+			font-size:.55rem;font-weight:700;letter-spacing:.18em;
+			text-transform:uppercase;padding:8px 18px;border-radius:3px;
+			cursor:pointer;transition:color .3s,background .3s;font-family:inherit;
+		" onmouseover="this.style.color='#87c6bd';this.style.background='rgba(135,198,189,.08)'"
+		   onmouseout="this.style.color='transparent';this.style.background='transparent'">
+			· · ·
+		</button>
+	</div>
+	<script>
+		function accederPresupuestos() {
+			var pw = prompt('Contraseña:');
+			if (pw === 'Manuteopanch0*') {
+				window.location.href = 'https://tu-rai-presupuestos.vercel.app';
+			} else if (pw !== null) {
+				alert('Contraseña incorrecta.');
+			}
+		}
+	</script>
+
+	<div class="overlay overlay-imprint" id="imprint">
 	<div class="overlay__content vertical-align-helper text-align--s--center background-color--black">
 		<div class="vertical-align--s--middle">
 			<div class="row max-width--1200 horizontal-align--s--center gutter-vertical--s--6">
