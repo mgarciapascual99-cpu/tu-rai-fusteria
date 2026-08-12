@@ -1,0 +1,21 @@
+{
+  "name": "Tu Rai Fusteria",
+  "short_name": "Tu Rai",
+  "description": "Fusteria artesanal a mida a Catalunya",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "/assets/img/favicons/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/logos/tu_rai_fusteria_logo_completo.png",
+      "sizes": "1254x1254",
+      "type": "image/png"
+    }
+  ]
+}
