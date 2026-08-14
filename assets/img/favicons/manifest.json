@@ -13,8 +13,8 @@
       "type": "image/png"
     },
     {
-      "src": "/assets/img/logos/tu_rai_fusteria_logo_completo.png",
-      "sizes": "1254x1254",
+      "src": "/assets/img/favicons/icon-512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
