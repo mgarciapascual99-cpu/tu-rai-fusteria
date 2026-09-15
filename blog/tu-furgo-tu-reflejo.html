@@ -42,12 +42,24 @@
     h1,h2,h3,h4,h5,h6,.button,.main-nav ul li a,.font-face--oak-bold { font-family: "Raleway", sans-serif !important; }
     .font-face--plantin-light { font-family: "Lora", Georgia, serif !important; font-weight: 300; }
 
-    /* Separación entre imágenes y sección de contacto */
+    /* Separación y estructura de la sección de contacto */
     .section-contact {
       margin-top: 0 !important;
-      padding-top: 80px;
+      padding-top: 100px;
+      padding-bottom: 80px;
     }
     .section-contact::before { display: none !important; }
+    /* El headline es absolute en el CSS del site — lo convertimos en estático */
+    .section-contact .section__headline {
+      position: relative !important;
+      top: auto !important;
+      padding-top: 0 !important;
+      margin-bottom: 60px;
+    }
+    /* El contenido ya no necesita compensar el headline absoluto */
+    .section-contact .section__content {
+      padding-top: 0 !important;
+    }
 
     /* ── SITE HEADER: mismas clases que el index, animación desactivada ── */
     .section-hero {
