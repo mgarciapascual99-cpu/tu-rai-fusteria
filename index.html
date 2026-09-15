@@ -624,12 +624,22 @@
 				font-family: 'Raleway', sans-serif;
 				font-size: .65rem;
 				font-weight: 700;
-				letter-spacing: .1em;
+				letter-spacing: .13em;
 				text-transform: uppercase;
-				color: #87c6bd;
-				margin-top: .35rem;
+				color: #1D1D1F;
+				margin-top: 1rem;
+				padding: 8px 20px;
+				border: 1px solid rgba(29,29,31,.18);
+				border-radius: 20px;
+				transition: background .2s, border-color .2s, color .2s;
+				cursor: pointer;
 			}
-			.product-card[data-href] .product-card__link-hint { display: block; }
+			.product-card[data-href] .product-card__link-hint { display: inline-block; }
+			.product-card[data-href]:hover .product-card__link-hint {
+				background: #1D1D1F;
+				border-color: #1D1D1F;
+				color: #fff;
+			}
 		</style>
 
 		<div class="row max-width--1200 horizontal-align--m--center">
@@ -657,7 +667,7 @@
 											<p class="product-card__desc">A medida · Interior completo</p>
 											<div class="product-card__divider"></div>
 											<h3 class="product-card__name">Camperización Básica a medida</h3>
-											<span class="product-card__link-hint">Leer más →</span>
+											<span class="product-card__link-hint">Ver más</span>
 					<span class="product-card__price">Precio a consultar</span>
 											
 										</div>
@@ -670,7 +680,7 @@
 											<p class="product-card__desc">A medida · Interior completo</p>
 											<div class="product-card__divider"></div>
 											<h3 class="product-card__name">Camperización Estándar</h3>
-											<span class="product-card__link-hint">Leer más →</span>
+											<span class="product-card__link-hint">Ver más</span>
 					<span class="product-card__price">Precio a consultar</span>
 											
 										</div>
@@ -683,7 +693,7 @@
 											<p class="product-card__desc">A medida · Interior completo</p>
 											<div class="product-card__divider"></div>
 											<h3 class="product-card__name">Camperización Premium</h3>
-											<span class="product-card__link-hint">Leer más →</span>
+											<span class="product-card__link-hint">Ver más</span>
 					<span class="product-card__price">Precio a consultar</span>
 											
 										</div>
@@ -713,7 +723,7 @@
 											<p class="product-card__desc">Madera de aveto · Salón</p>
 											<div class="product-card__divider"></div>
 											<h3 class="product-card__name">Librería de madera de aveto</h3>
-											<span class="product-card__link-hint">Leer más →</span>
+											<span class="product-card__link-hint">Ver más</span>
 					<span class="product-card__price">120 €</span>
 										</div>
 									</article>
@@ -725,7 +735,7 @@
 											<p class="product-card__desc">Madera maciza · Comedor</p>
 											<div class="product-card__divider"></div>
 											<h3 class="product-card__name">Silla de madera</h3>
-											<span class="product-card__link-hint">Leer más →</span>
+											<span class="product-card__link-hint">Ver más</span>
 					<span class="product-card__price">Consultar</span>
 										</div>
 									</article>
@@ -737,7 +747,7 @@
 											<p class="product-card__desc">Pino macizo · Cocina</p>
 											<div class="product-card__divider"></div>
 											<h3 class="product-card__name">Tabla de cortar grande</h3>
-											<span class="product-card__link-hint">Leer más →</span>
+											<span class="product-card__link-hint">Ver más</span>
 					<span class="product-card__price">60 €</span>
 										</div>
 									</article>
@@ -766,7 +776,7 @@
 											<p class="product-card__desc">Madera maciza · Encargo único</p>
 											<div class="product-card__divider"></div>
 											<h3 class="product-card__name">Proyecto a medida</h3>
-											<span class="product-card__link-hint">Leer más →</span>
+											<span class="product-card__link-hint">Ver más</span>
 					<span class="product-card__price">Consultar</span>
 										</div>
 									</article>
@@ -777,7 +787,7 @@
 											<p class="product-card__desc">Madera maciza · Taller</p>
 											<div class="product-card__divider"></div>
 											<h3 class="product-card__name">Banco de trabajo</h3>
-											<span class="product-card__link-hint">Leer más →</span>
+											<span class="product-card__link-hint">Ver más</span>
 					<span class="product-card__price">Consultar</span>
 										</div>
 									</article>
