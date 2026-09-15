@@ -610,6 +610,26 @@
 				color: #1D1D1F;
 				margin-top: 0.35rem;
 			}
+
+			/* Tarjeta con enlace a blog */
+			.product-card[data-href] { cursor: pointer; }
+			.product-card[data-href] .product-card__name {
+				transition: color .2s;
+			}
+			.product-card[data-href]:hover .product-card__name {
+				color: #87c6bd;
+			}
+			.product-card__link-hint {
+				display: none;
+				font-family: 'Raleway', sans-serif;
+				font-size: .65rem;
+				font-weight: 700;
+				letter-spacing: .1em;
+				text-transform: uppercase;
+				color: #87c6bd;
+				margin-top: .35rem;
+			}
+			.product-card[data-href] .product-card__link-hint { display: block; }
 		</style>
 
 		<div class="row max-width--1200 horizontal-align--m--center">
@@ -629,7 +649,7 @@
 						<div class="cat-panel" role="region">
 							<div class="cat-panel__inner">
 								<div class="products-grid">
-									<article class="product-card">
+									<article class="product-card" data-href="">
 										<div class="product-card__img-wrap">
 											<img src="assets/img/Camper Vasica.png" alt="Camperización Básica a medida">
 										</div>
@@ -637,11 +657,12 @@
 											<p class="product-card__desc">A medida · Interior completo</p>
 											<div class="product-card__divider"></div>
 											<h3 class="product-card__name">Camperización Básica a medida</h3>
-											<span class="product-card__price">Precio a consultar</span>
+											<span class="product-card__link-hint">Leer más →</span>
+					<span class="product-card__price">Precio a consultar</span>
 											
 										</div>
 									</article>
-									<article class="product-card">
+									<article class="product-card" data-href="">
 										<div class="product-card__img-wrap">
 											<img src="assets/img/Camper Standar.png" alt="Camperización Estándar">
 										</div>
@@ -649,11 +670,12 @@
 											<p class="product-card__desc">A medida · Interior completo</p>
 											<div class="product-card__divider"></div>
 											<h3 class="product-card__name">Camperización Estándar</h3>
-											<span class="product-card__price">Precio a consultar</span>
+											<span class="product-card__link-hint">Leer más →</span>
+					<span class="product-card__price">Precio a consultar</span>
 											
 										</div>
 									</article>
-									<article class="product-card">
+									<article class="product-card" data-href="">
 										<div class="product-card__img-wrap">
 											<img src="assets/img/Camper Premiu.png" alt="Camperización Premium">
 										</div>
@@ -661,7 +683,8 @@
 											<p class="product-card__desc">A medida · Interior completo</p>
 											<div class="product-card__divider"></div>
 											<h3 class="product-card__name">Camperización Premium</h3>
-											<span class="product-card__price">Precio a consultar</span>
+											<span class="product-card__link-hint">Leer más →</span>
+					<span class="product-card__price">Precio a consultar</span>
 											
 										</div>
 									</article>
@@ -682,7 +705,7 @@
 						<div class="cat-panel" role="region">
 							<div class="cat-panel__inner">
 								<div class="products-grid">
-									<article class="product-card">
+									<article class="product-card" data-href="">
 										<div class="product-card__img-wrap">
 											<img src="assets/img/imagen-portada-mobil.png" alt="Mesa de roble macizo">
 										</div>
@@ -690,10 +713,11 @@
 											<p class="product-card__desc">Madera de aveto · Salón</p>
 											<div class="product-card__divider"></div>
 											<h3 class="product-card__name">Librería de madera de aveto</h3>
-											<span class="product-card__price">120 €</span>
+											<span class="product-card__link-hint">Leer más →</span>
+					<span class="product-card__price">120 €</span>
 										</div>
 									</article>
-									<article class="product-card">
+									<article class="product-card" data-href="">
 										<div class="product-card__img-wrap">
 											<img src="assets/img/imagen-portada-mobil.png" alt="Estante flotante">
 										</div>
@@ -701,10 +725,11 @@
 											<p class="product-card__desc">Madera maciza · Comedor</p>
 											<div class="product-card__divider"></div>
 											<h3 class="product-card__name">Silla de madera</h3>
-											<span class="product-card__price">Consultar</span>
+											<span class="product-card__link-hint">Leer más →</span>
+					<span class="product-card__price">Consultar</span>
 										</div>
 									</article>
-									<article class="product-card">
+									<article class="product-card" data-href="">
 										<div class="product-card__img-wrap">
 											<img src="assets/img/Tabla de corte sin fondo.png" alt="Tabla de cortar">
 										</div>
@@ -712,7 +737,8 @@
 											<p class="product-card__desc">Pino macizo · Cocina</p>
 											<div class="product-card__divider"></div>
 											<h3 class="product-card__name">Tabla de cortar grande</h3>
-											<span class="product-card__price">60 €</span>
+											<span class="product-card__link-hint">Leer más →</span>
+					<span class="product-card__price">60 €</span>
 										</div>
 									</article>
 									</div>
@@ -732,7 +758,7 @@
 						<div class="cat-panel" role="region">
 							<div class="cat-panel__inner">
 								<div class="products-grid">
-									<article class="product-card">
+									<article class="product-card" data-href="">
 										<div class="product-card__img-wrap">
 											<img src="assets/img/imagen-portada-mobil.png" alt="Proyecto personalizado">
 										</div>
@@ -740,17 +766,19 @@
 											<p class="product-card__desc">Madera maciza · Encargo único</p>
 											<div class="product-card__divider"></div>
 											<h3 class="product-card__name">Proyecto a medida</h3>
-											<span class="product-card__price">Consultar</span>
+											<span class="product-card__link-hint">Leer más →</span>
+					<span class="product-card__price">Consultar</span>
 										</div>
 									</article>
-									<article class="product-card">
+									<article class="product-card" data-href="">
 										<div class="product-card__img-wrap" style="background:#F3F3F3;">
 										</div>
 										<div class="product-card__info">
 											<p class="product-card__desc">Madera maciza · Taller</p>
 											<div class="product-card__divider"></div>
 											<h3 class="product-card__name">Banco de trabajo</h3>
-											<span class="product-card__price">Consultar</span>
+											<span class="product-card__link-hint">Leer más →</span>
+					<span class="product-card__price">Consultar</span>
 										</div>
 									</article>
 								</div>
@@ -768,6 +796,14 @@
 </div>
 
 <script>
+	// Tarjetas con enlace a blog
+	document.querySelectorAll('.product-card[data-href]').forEach(function(card) {
+		var url = card.getAttribute('data-href');
+		if (url) {
+			card.addEventListener('click', function() { window.open(url, '_blank'); });
+		}
+	});
+
 	document.querySelectorAll('.cat-trigger').forEach(function(btn) {
 		btn.addEventListener('click', function() {
 			var item = btn.closest('.cat-item');
