@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 
   <!-- SEO -->
   <title>Tu furgo, tu reflejo — Tu Rai Fusteria</title>
-  <meta name="description" content="Cada camperización nace de escucharte. Tu manera de viajar, tus prioridades, tu gusto. Así es como trabajamos en Tu Rai Fusteria: el resultado es tuyo, no nuestro.">
+  <meta name="description" content="Cada camperización nace de escucharte. Tu manera de viajar, tus prioridades, tu gusto. Así es como trabajamos en Tu Rai Fusteria.">
   <meta name="keywords" content="camperización a medida, furgoneta camper interior madera, camper personalizada, carpintería camper Cataluña, Tu Rai Fusteria">
   <link rel="canonical" href="https://tu-rai.com/blog/tu-furgo-tu-reflejo.html">
 
@@ -16,241 +16,279 @@
   <meta property="og:description" content="Cada camperización nace de escucharte. Tu manera de viajar, tus prioridades, tu gusto.">
   <meta property="og:url" content="https://tu-rai.com/blog/tu-furgo-tu-reflejo.html">
   <meta property="og:site_name" content="Tu Rai Fusteria">
+  <meta property="og:image" content="https://tu-rai.com/assets/img/Camper.jpg">
   <meta property="article:published_time" content="2026-09-14">
   <meta property="article:section" content="Identidad">
+
+  <!-- Main site CSS -->
+  <link type="text/css" rel="stylesheet" href="../assets/css/styles.min.css">
+
+  <!-- JS (for nav hamburger) -->
+  <script type="text/javascript" src="../assets/js/respond.min.js"></script>
+  <script type="text/javascript" src="../assets/js/modernizr.min.js"></script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Lora:ital,wght@0,400;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* ── RESET / BASE ── */
+    *, *::before, *::after { box-sizing: border-box; }
     body {
-      font-family: 'Raleway', sans-serif;
       background: #F3F3F3;
       color: #1D1D1F;
-      font-size: 16px;
-      font-weight: 300;
       -webkit-font-smoothing: antialiased;
     }
     a { text-decoration: none; color: inherit; }
     img { display: block; max-width: 100%; }
 
-    /* ── NAV ── */
-    .main-nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: #fff;
-      border-bottom: 1px solid #F0F0F0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 40px;
-      height: 56px;
+    /* ── NAV override: restore brand font rules ── */
+    h1,h2,h3,h4,h5,h6,.button,.main-nav ul li a,.font-face--oak-bold {
+      font-family: "Raleway", sans-serif !important;
     }
-    .nav-logo img {
-      height: 28px;
+    .font-face--plantin-light { font-family: "Lora", Georgia, serif !important; font-weight: 300; }
+
+    /* ── NAV logo (reuse site logo) ── */
+    .blog-nav-logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .blog-nav-logo img {
+      height: 32px;
       width: auto;
+    }
+
+    /* ── HERO IMAGE ── */
+    .blog-hero {
+      width: 100%;
+      height: 72vh;
+      min-height: 340px;
+      overflow: hidden;
+      position: relative;
+    }
+    .blog-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
       display: block;
     }
-    .nav-links {
-      display: flex;
-      gap: 36px;
-      list-style: none;
-    }
-    .nav-links a {
-      font-family: 'Raleway', sans-serif;
-      font-size: .75rem;
-      font-weight: 700;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-      color: #1D1D1F;
-      transition: color .15s;
-    }
-    .nav-links a:hover { color: #999; }
 
-    /* ── ARTICLE LAYOUT ── */
-    .article-wrap {
-      padding-top: 56px;
-    }
-
-    /* ── HERO ── */
-    .article-hero {
-      background: #1D1D1F;
-      padding: 80px 40px 72px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    /* ── TITLE BLOCK ── */
+    .blog-title-wrap {
       text-align: center;
+      padding: 72px 24px 56px;
+      background: #F3F3F3;
     }
-    .article-cat {
+    .blog-cat {
       font-family: 'Raleway', sans-serif;
       font-size: .65rem;
       font-weight: 700;
       letter-spacing: .22em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.45);
-      margin-bottom: 24px;
+      color: #aaa;
+      margin-bottom: 28px;
     }
-    .article-title {
-      font-family: 'Lora', Georgia, serif;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 400;
-      color: #fff;
-      line-height: 1.2;
-      max-width: 720px;
+    .blog-title {
+      font-family: 'Cormorant Garamond', 'Lora', Georgia, serif !important;
+      font-size: clamp(3rem, 10vw, 7rem);
+      font-weight: 300;
+      line-height: 1.0;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: #1D1D1F;
+      margin: 0 auto;
+      max-width: 900px;
     }
-    .article-subtitle {
-      font-family: 'Lora', Georgia, serif;
-      font-size: clamp(.95rem, 2vw, 1.2rem);
-      font-style: italic;
-      font-weight: 400;
-      color: rgba(255,255,255,.55);
-      margin-top: 18px;
-      max-width: 560px;
+    .blog-divider {
+      width: 48px;
+      height: 1.5px;
+      background: #1D1D1F;
+      margin: 40px auto 32px;
     }
-    .article-meta {
-      margin-top: 40px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .article-meta-sep {
-      width: 32px;
-      height: 1px;
-      background: rgba(255,255,255,.2);
-    }
-    .article-meta-text {
+    .blog-meta {
       font-family: 'Raleway', sans-serif;
       font-size: .65rem;
       font-weight: 300;
-      letter-spacing: .12em;
+      letter-spacing: .16em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.35);
+      color: #bbb;
     }
 
-    /* ── BODY ── */
-    .article-body {
-      max-width: 720px;
+    /* ── ARTICLE BODY ── */
+    .blog-body {
+      max-width: 680px;
       margin: 0 auto;
-      padding: 72px 24px 100px;
+      padding: 0 24px 80px;
     }
-
-    .article-body p {
+    .blog-body p {
       font-family: 'Lora', Georgia, serif;
-      font-size: 1.08rem;
+      font-size: 1.05rem;
       font-weight: 400;
-      line-height: 1.85;
+      line-height: 1.9;
       color: #1D1D1F;
       margin-bottom: 1.6rem;
     }
-    .article-body p em {
+    .blog-body p em {
       font-style: italic;
-      color: #888;
-      font-size: .92em;
+      color: #999;
+      font-size: .93em;
     }
-    .article-body h2 {
-      font-family: 'Lora', Georgia, serif;
-      font-size: 1.5rem;
-      font-weight: 400;
+    .blog-body h2 {
+      font-family: 'Cormorant Garamond', 'Lora', Georgia, serif !important;
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: .04em;
+      text-transform: uppercase;
       color: #1D1D1F;
-      margin: 3rem 0 1.2rem;
-      line-height: 1.3;
+      margin: 3.5rem 0 1.2rem;
     }
-    .article-body h3 {
-      font-family: 'Raleway', sans-serif;
-      font-size: .72rem;
+    .blog-body h3 {
+      font-family: 'Raleway', sans-serif !important;
+      font-size: .68rem;
       font-weight: 700;
       letter-spacing: .18em;
       text-transform: uppercase;
-      color: #aaa;
-      margin: 2.4rem 0 1rem;
+      color: #bbb;
+      margin: 2.8rem 0 1rem;
     }
-    .article-body blockquote {
-      border-left: 2px solid #1D1D1F;
-      margin: 2.4rem 0;
-      padding: 4px 0 4px 28px;
+    .blog-body blockquote {
+      border-left: 1.5px solid #1D1D1F;
+      margin: 2.8rem 0;
+      padding: 2px 0 2px 28px;
     }
-    .article-body blockquote p {
-      font-size: 1.25rem;
-      line-height: 1.6;
+    .blog-body blockquote p {
+      font-family: 'Cormorant Garamond', 'Lora', Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 300;
       font-style: italic;
+      line-height: 1.5;
       color: #1D1D1F;
       margin: 0;
     }
-    .article-divider {
-      width: 40px;
+    .blog-section-divider {
+      width: 36px;
       height: 1px;
       background: #D8D8D8;
       margin: 3rem auto;
     }
 
+    /* ── IMAGES ── */
+    .blog-images {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .blog-img-main {
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      background: #E0E0E0;
+    }
+    .blog-img-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .blog-img-secondary {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .blog-img-secondary figure {
+      margin: 0;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      border-radius: 4px;
+      background: #E0E0E0;
+    }
+    .blog-img-secondary figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .blog-img-caption {
+      font-family: 'Raleway', sans-serif;
+      font-size: .62rem;
+      font-weight: 300;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+      color: #bbb;
+      text-align: center;
+      margin-top: 16px;
+    }
+
     /* ── CTA ── */
-    .article-cta {
+    .blog-cta {
       background: #1D1D1F;
-      padding: 60px 40px;
+      padding: 72px 40px;
       text-align: center;
     }
-    .article-cta p {
-      font-family: 'Lora', Georgia, serif;
-      font-size: 1.3rem;
-      font-weight: 400;
+    .blog-cta p {
+      font-family: 'Cormorant Garamond', 'Lora', Georgia, serif;
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-weight: 300;
       color: rgba(255,255,255,.8);
-      margin-bottom: 28px;
-      line-height: 1.5;
+      margin-bottom: 32px;
+      line-height: 1.4;
     }
     .btn-cta {
       display: inline-block;
-      border: 1.5px solid rgba(255,255,255,.5);
-      border-radius: 8px;
-      padding: 12px 32px;
+      border: 1px solid rgba(255,255,255,.4);
+      border-radius: 4px;
+      padding: 12px 36px;
       font-family: 'Raleway', sans-serif;
-      font-size: .72rem;
+      font-size: .65rem;
       font-weight: 700;
-      letter-spacing: .14em;
+      letter-spacing: .18em;
       text-transform: uppercase;
       color: #fff;
-      transition: background .2s, border-color .2s;
+      transition: border-color .2s, background .2s;
     }
-    .btn-cta:hover { background: rgba(255,255,255,.08); border-color: #fff; }
+    .btn-cta:hover { border-color: #fff; background: rgba(255,255,255,.06); }
 
     /* ── BACK ── */
-    .article-back {
-      padding: 32px 40px;
-      background: #F3F3F3;
+    .blog-back {
+      padding: 28px 40px;
       border-top: 1px solid #E8E8E8;
+      background: #F3F3F3;
     }
-    .article-back a {
+    .blog-back a {
       font-family: 'Raleway', sans-serif;
-      font-size: .7rem;
+      font-size: .65rem;
       font-weight: 700;
       letter-spacing: .14em;
       text-transform: uppercase;
-      color: #999;
+      color: #bbb;
       transition: color .15s;
     }
-    .article-back a:hover { color: #1D1D1F; }
+    .blog-back a:hover { color: #1D1D1F; }
 
     /* ── MOBILE ── */
     @media (max-width: 640px) {
-      .main-nav { padding: 0 20px; }
-      .nav-links { display: none; }
-      .article-hero { padding: 60px 24px 52px; }
-      .article-body { padding: 48px 20px 72px; }
-      .article-cta { padding: 48px 24px; }
-      .article-back { padding: 24px 20px; }
+      .blog-hero { height: 52vw; min-height: 220px; }
+      .blog-title-wrap { padding: 52px 20px 40px; }
+      .blog-body { padding: 0 20px 60px; }
+      .blog-images { padding: 0 20px 60px; }
+      .blog-cta { padding: 52px 24px; }
+      .blog-back { padding: 20px; }
+      .blog-img-secondary { grid-template-columns: 1fr; }
     }
   </style>
 
-  <!-- Schema.org Article -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Tu furgo, tu reflejo",
-    "description": "Cada camperización nace de escucharte. Tu manera de viajar, tus prioridades, tu gusto. El resultado es tuyo, no nuestro.",
+    "description": "Cada camperización nace de escucharte. Tu manera de viajar, tus prioridades, tu gusto.",
     "author": { "@type": "Organization", "name": "Tu Rai Fusteria" },
     "publisher": { "@type": "Organization", "name": "Tu Rai Fusteria", "url": "https://tu-rai.com" },
     "datePublished": "2026-09-14",
@@ -261,102 +299,116 @@
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="main-nav">
-    <a class="nav-logo" href="../index.html">
-      <img src="../assets/img/logos/tu_rai_fusteria_logo_negro_transparent.svg" alt="Tu Rai Fusteria">
-    </a>
-    <ul class="nav-links">
+  <!-- NAV (identical to main site) -->
+  <nav class="main-nav" style="position:relative;">
+    <ul>
       <li><a href="../index.html">Inicio</a></li>
       <li><a href="../index.html#gems">Quienes somos</a></li>
       <li><a href="../index.html#work">Productos</a></li>
       <li><a href="../index.html#contact">Contacto</a></li>
     </ul>
+    <a href="#" class="main-nav-trigger">
+      <i class="icon icon--burger"></i>
+    </a>
   </nav>
 
-  <div class="article-wrap">
+  <!-- HERO IMAGE -->
+  <section class="blog-hero">
+    <img src="../assets/img/Camper.jpg" alt="Interior de furgoneta camperizada en madera por Tu Rai Fusteria">
+  </section>
 
-    <!-- HERO -->
-    <header class="article-hero">
-      <p class="article-cat">Identidad</p>
-      <h1 class="article-title">Tu furgo, tu reflejo</h1>
-      <p class="article-subtitle">Cada proyecto nace de escucharte</p>
-      <div class="article-meta">
-        <span class="article-meta-text">Tu Rai Fusteria</span>
-        <span class="article-meta-sep"></span>
-        <span class="article-meta-text">Septiembre 2026</span>
-        <span class="article-meta-sep"></span>
-        <span class="article-meta-text">5 min</span>
-      </div>
-    </header>
-
-    <!-- ARTICLE -->
-    <article class="article-body">
-
-      <p>No hay dos furgonetas iguales. No porque los materiales sean distintos ni porque los presupuestos varíen, sino porque las personas que van a vivir dentro son distintas. Y ese es el único punto de partida que tiene sentido.</p>
-
-      <blockquote>
-        <p>El resultado es tuyo, no nuestro.</p>
-      </blockquote>
-
-      <p>Antes de coger una sierra o hacer un pedido de madera, nos sentamos a escuchar. Cómo viajas. Solo o acompañado. Fines de semana o meses seguidos. Si cocinas o prefieres parar en bares de carretera. Si lees por la noche o madrugas con el sol. Si llevas bici, tabla de surf o simplemente una mochila pequeña.</p>
-
-      <p>Cada respuesta condiciona una decisión. La posición de la cama, la altura de la cocina, la cantidad de luz que entra por la tarde, el espacio bajo el banco. No son detalles menores. Son la diferencia entre una furgoneta que usas y una furgoneta que es tuya.</p>
-
-      <div class="article-divider"></div>
-
-      <h2>La madera como punto de partida</h2>
-
-      <p>Trabajamos la madera porque es el material más honesto para este tipo de proyecto. Se adapta, se trabaja a mano, envejece bien y responde al calor de una manera que el aluminio o el plástico no pueden imitar. Una pared de friso de pino a las seis de la tarde, con la luz entrando de lado, tiene una calidez que ningún panel sintético consigue.</p>
-
-      <p>Pero la madera también exige criterio. Elegir el grosor adecuado para que el techo no pese demasiado. Protegerla bien para que la humedad del invierno no la deforme. Dejar las juntas con espacio para que respire. Son decisiones que se toman antes de montar la primera lama, y que no se ven cuando el resultado está terminado.</p>
-
-      <p><em>Treballem la fusta macissa amb tècniques tradicionals i respecte per la matèria primera. Cada peça és única, feta per durar i adaptar-se a qui la rep.</em></p>
-
-      <div class="article-divider"></div>
-
-      <h2>El proceso, paso a paso</h2>
-
-      <h3>Primero, aislar bien</h3>
-
-      <p>Un aislamiento mal ejecutado arruina todo lo que viene después. No se trata solo de no pasar frío en invierno: se trata de evitar condensación, de proteger la madera interior, de reducir el ruido de la lluvia sobre el techo. Usamos espuma elastomérica de célula cerrada y lana de oveja en las cavidades. Materiales que no absorben humedad y que duran tanto como la furgoneta.</p>
-
-      <h3>El rastrelado, la estructura invisible</h3>
-
-      <p>Sobre el aislante va la retícula de listones. Es la pieza que no se ve pero sobre la que descansa todo el panelado. La hacemos en pino, fijada directamente a la chapa, creando una superficie plana y nivelada sobre la que trabajar. Por aquí también escondemos el cableado antes de cerrar las paredes.</p>
-
-      <h3>El panelado, donde vive el detalle</h3>
-
-      <p>Cada panel se prueba primero en cartón. Antes de cortar la madera definitiva, comprobamos que encaja, que las curvas del techo quedan bien absorbidas, que las uniones son limpias. El montaje es oculto: ningún tornillo visible en la superficie. El resultado final es una pared que parece haber crecido ahí dentro.</p>
-
-      <div class="article-divider"></div>
-
-      <h2>Sin prisas, sin atajos</h2>
-
-      <p>El tiempo que lleva hacer bien una furgoneta no se puede comprimir. Las lamas del techo curvo son tres o cuatro días de trabajo solo para esa zona. El aislamiento pide paciencia para cubrir cada nervio de la carrocería sin puentes térmicos. Nada de esto se puede acelerar sin que se note.</p>
-
-      <p>Lo sabemos porque lo hacemos nosotros mismos, en el taller, pieza a pieza. Y porque cuando entregamos una furgoneta, queremos que quien la recibe sienta exactamente eso: que alguien estuvo aquí, pensó en cada cosa, y lo hizo bien.</p>
-
-      <blockquote>
-        <p>Tu manera de viajar, tus prioridades, tu gusto. El resultado es tuyo, no nuestro.</p>
-      </blockquote>
-
-      <p>Si estás pensando en convertir tu furgoneta, cuéntanos cómo viajas. El resto lo construimos juntos.</p>
-
-    </article>
-
-    <!-- CTA -->
-    <section class="article-cta">
-      <p>¿Tienes una furgoneta y sabes cómo quieres viajar?<br>Cuéntanoslo.</p>
-      <a class="btn-cta" href="../index.html#contact">Contactar</a>
-    </section>
-
-    <!-- BACK -->
-    <div class="article-back">
-      <a href="../index.html#work">← Volver a productos</a>
-    </div>
-
+  <!-- TITLE -->
+  <div class="blog-title-wrap">
+    <p class="blog-cat">Identidad</p>
+    <h1 class="blog-title">Tu furgo,<br>tu reflejo</h1>
+    <div class="blog-divider"></div>
+    <p class="blog-meta">Tu Rai Fusteria &nbsp;·&nbsp; Septiembre 2026 &nbsp;·&nbsp; 5 min</p>
   </div>
+
+  <!-- ARTICLE -->
+  <article class="blog-body">
+
+    <p>No hay dos furgonetas iguales. No porque los materiales sean distintos ni porque los presupuestos varíen, sino porque las personas que van a vivir dentro son distintas. Y ese es el único punto de partida que tiene sentido.</p>
+
+    <blockquote>
+      <p>El resultado es tuyo, no nuestro.</p>
+    </blockquote>
+
+    <p>Antes de coger una sierra o hacer un pedido de madera, nos sentamos a escuchar. Cómo viajas. Solo o acompañado. Fines de semana o meses seguidos. Si cocinas o prefieres parar en bares de carretera. Si lees por la noche o madrugas con el sol. Si llevas bici, tabla de surf o simplemente una mochila pequeña.</p>
+
+    <p>Cada respuesta condiciona una decisión. La posición de la cama, la altura de la cocina, la cantidad de luz que entra por la tarde, el espacio bajo el banco. No son detalles menores. Son la diferencia entre una furgoneta que usas y una furgoneta que es tuya.</p>
+
+    <div class="blog-section-divider"></div>
+
+    <h2>La madera como punto de partida</h2>
+
+    <p>Trabajamos la madera porque es el material más honesto para este tipo de proyecto. Se adapta, se trabaja a mano, envejece bien y responde al calor de una manera que el aluminio o el plástico no pueden imitar. Una pared de friso de pino a las seis de la tarde, con la luz entrando de lado, tiene una calidez que ningún panel sintético consigue.</p>
+
+    <p>Pero la madera también exige criterio. Elegir el grosor adecuado para que el techo no pese demasiado. Protegerla bien para que la humedad del invierno no la deforme. Dejar las juntas con espacio para que respire. Son decisiones que se toman antes de montar la primera lama, y que no se ven cuando el resultado está terminado.</p>
+
+    <p><em>Treballem la fusta macissa amb tècniques tradicionals i respecte per la matèria primera. Cada peça és única, feta per durar i adaptar-se a qui la rep.</em></p>
+
+    <div class="blog-section-divider"></div>
+
+    <h2>El proceso, paso a paso</h2>
+
+    <h3>Primero, aislar bien</h3>
+
+    <p>Un aislamiento mal ejecutado arruina todo lo que viene después. No se trata solo de no pasar frío en invierno: se trata de evitar condensación, de proteger la madera interior, de reducir el ruido de la lluvia sobre el techo. Usamos espuma elastomérica de célula cerrada en paredes y lana de oveja en las cavidades. Materiales que no absorben humedad y que duran tanto como la furgoneta.</p>
+
+    <h3>El rastrelado, la estructura invisible</h3>
+
+    <p>Sobre el aislante va la retícula de listones. Es la pieza que no se ve pero sobre la que descansa todo el panelado. La hacemos en pino, fijada directamente a la chapa, creando una superficie plana y nivelada sobre la que trabajar. Por aquí también escondemos el cableado antes de cerrar las paredes.</p>
+
+    <h3>El panelado, donde vive el detalle</h3>
+
+    <p>Cada panel se prueba primero en cartón. Antes de cortar la madera definitiva, comprobamos que encaja, que las curvas del techo quedan bien absorbidas, que las uniones son limpias. El montaje es oculto: ningún tornillo visible en la superficie. El resultado final es una pared que parece haber crecido ahí dentro.</p>
+
+    <div class="blog-section-divider"></div>
+
+    <h2>Sin prisas, sin atajos</h2>
+
+    <p>El tiempo que lleva hacer bien una furgoneta no se puede comprimir. Las lamas del techo curvo son tres o cuatro días de trabajo solo para esa zona. El aislamiento pide paciencia para cubrir cada nervio de la carrocería sin puentes térmicos. Nada de esto se puede acelerar sin que se note.</p>
+
+    <p>Lo sabemos porque lo hacemos nosotros mismos, en el taller, pieza a pieza. Y porque cuando entregamos una furgoneta, queremos que quien la recibe sienta exactamente eso: que alguien estuvo aquí, pensó en cada cosa, y lo hizo bien.</p>
+
+    <blockquote>
+      <p>Tu manera de viajar, tus prioridades, tu gusto. El resultado es tuyo, no nuestro.</p>
+    </blockquote>
+
+    <p>Si estás pensando en convertir tu furgoneta, cuéntanos cómo viajas. El resto lo construimos juntos.</p>
+
+  </article>
+
+  <!-- IMAGES -->
+  <section class="blog-images">
+    <div class="blog-img-main">
+      <img src="../assets/img/Camper.jpg" alt="Camperización en madera Tu Rai Fusteria">
+    </div>
+    <div class="blog-img-secondary">
+      <figure>
+        <img src="../assets/img/Camper.jpg" alt="Interior panelado en madera">
+      </figure>
+      <figure>
+        <img src="../assets/img/Camper.jpg" alt="Detalle de aislamiento y rastrelado">
+      </figure>
+    </div>
+    <p class="blog-img-caption">Puedes sustituir estas imágenes por las fotos reales del proyecto</p>
+  </section>
+
+  <!-- CTA -->
+  <section class="blog-cta">
+    <p>¿Tienes una furgoneta y sabes cómo quieres viajar?<br>Cuéntanoslo.</p>
+    <a class="btn-cta" href="../index.html#contact">Contactar</a>
+  </section>
+
+  <!-- BACK -->
+  <div class="blog-back">
+    <a href="../index.html#letters">← Volver al portafolio</a>
+  </div>
+
+  <script type="text/javascript" src="../assets/js/vendor.min.js"></script>
+  <script type="text/javascript" src="../assets/js/scripts.min.js"></script>
 
 </body>
 </html>
