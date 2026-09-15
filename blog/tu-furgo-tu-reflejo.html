@@ -41,17 +41,23 @@
     /* Font overrides */
     h1,h2,h3,h4,h5,h6,.button,.main-nav ul li a { font-family: "Raleway", sans-serif !important; }
 
-    /* ── CABECERA: logo centrado en pantalla completa, igual que la home ── */
-    .blog-intro {
-      background: #F3F3F3;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /* ── SITE HEADER: mismas clases que el index, animación desactivada ── */
+    .section-hero {
+      transform: translateY(0) !important;
+      height: auto !important;
+      padding-top: 60px; /* compensa nav fijo */
     }
-    .blog-intro img {
+    .section-hero .logo {
+      position: relative !important;
+      left: auto !important;
+      top: auto !important;
+      transform: none !important;
+      display: block;
+      margin: 0 auto;
       width: 280px;
       height: 280px;
+      margin-top: -205px;
+      margin-bottom: -25px;
     }
 
     /* ── HERO IMAGE (ancho completo, como en la web) ── */
@@ -262,7 +268,7 @@
 
     /* ── MOBILE ── */
     @media (max-width: 640px) {
-      .blog-intro img { width: 200px; height: 200px; }
+      .section-hero .logo { width: 200px !important; height: 200px !important; margin-top: -140px !important; }
       .blog-hero { max-height: 52vw; }
       .blog-title-wrap { padding: 52px 20px 40px; }
       .blog-body { padding: 0 20px 60px; }
@@ -303,12 +309,12 @@
     </a>
   </nav>
 
-  <!-- CABECERA: logo centrado en pantalla completa como en la home -->
-  <div class="blog-intro">
+  <!-- CABECERA: misma estructura exacta que el index -->
+  <section class="section-hero">
     <a href="../index.html">
-      <img src="../assets/img/logos/tu_rai_fusteria_logo_negro_transparent.svg" alt="Tu Rai Fusteria">
+      <img class="logo" src="../assets/img/logos/tu_rai_fusteria_logo_negro_transparent.svg" alt="Tu Rai Fusteria">
     </a>
-  </div>
+  </section>
 
   <!-- IMAGEN PROTAGONISTA a ancho completo -->
   <section class="blog-hero">
