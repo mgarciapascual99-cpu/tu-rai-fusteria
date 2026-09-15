@@ -49,16 +49,21 @@
     }
     .font-face--plantin-light { font-family: "Lora", Georgia, serif !important; font-weight: 300; }
 
-    /* ── NAV logo (reuse site logo) ── */
+    /* ── NAV overrides ── */
+    .main-nav {
+      position: relative !important;
+      background: #fff !important;
+      border-bottom: 1px solid #F0F0F0;
+    }
     .blog-nav-logo {
       position: absolute;
       left: 50%;
-      transform: translateX(-50%);
       top: 50%;
       transform: translate(-50%, -50%);
+      line-height: 0;
     }
     .blog-nav-logo img {
-      height: 32px;
+      height: 28px;
       width: auto;
     }
 
@@ -299,14 +304,17 @@
 </head>
 <body>
 
-  <!-- NAV (identical to main site) -->
-  <nav class="main-nav" style="position:relative;">
+  <!-- NAV -->
+  <nav class="main-nav">
     <ul>
       <li><a href="../index.html">Inicio</a></li>
       <li><a href="../index.html#gems">Quienes somos</a></li>
       <li><a href="../index.html#work">Productos</a></li>
       <li><a href="../index.html#contact">Contacto</a></li>
     </ul>
+    <a href="../index.html" class="blog-nav-logo">
+      <img src="../assets/img/logos/tu_rai_fusteria_logo_negro_transparent.svg" alt="Tu Rai Fusteria">
+    </a>
     <a href="#" class="main-nav-trigger">
       <i class="icon icon--burger"></i>
     </a>
