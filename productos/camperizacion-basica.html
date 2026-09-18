@@ -623,144 +623,87 @@
 		<div class="row max-width--1200 horizontal-align--m--center">
 			<div class="column--m--8of12 column-offset--m--2of12 gutter--s--1">
 
+				<style>
+					.photo-grid {
+						display: grid;
+						grid-template-columns: repeat(3, 1fr);
+						gap: 0.75rem;
+						padding: 0.5rem 0 1.5rem;
+					}
+					@media (max-width: 600px) {
+						.photo-grid { grid-template-columns: repeat(2, 1fr); }
+					}
+					.photo-grid__item {
+						aspect-ratio: 4/3;
+						overflow: hidden;
+						border-radius: 10px;
+						background: #f3f3f3;
+					}
+					.photo-grid__item img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						display: block;
+					}
+				</style>
+
 				<ul class="project-nav">
 
-					<!-- CATEGORÍA: CAMPERIZACIÓN -->
+					<!-- TECHOS Y PAREDES -->
 					<li class="cat-item">
 						<button class="cat-trigger" aria-expanded="false">
-							<span class="cat-trigger__name">Camperización</span>
-							<span class="cat-trigger__sub">Furgonetas a medida · Interior completo</span>
+							<span class="cat-trigger__name">Techos y Paredes</span>
+							<span class="cat-trigger__sub">Aislamiento · Suelo · Panelado</span>
 							<svg class="cat-trigger__arrow" viewBox="0 0 14 14" fill="none" stroke="#1D1D1F" stroke-width="2">
 								<line x1="7" y1="0" x2="7" y2="14"/><line x1="0" y1="7" x2="14" y2="7"/>
 							</svg>
 						</button>
 						<div class="cat-panel" role="region">
 							<div class="cat-panel__inner">
-								<div class="products-grid">
-									<article class="product-card" data-href="productos/camperizacion-basica.html">
-										<div class="product-card__img-wrap">
-											<img src="../assets/img/Camper Vasica.png" alt="Camperización Básica a medida">
-										</div>
-										<div class="product-card__info">
-											<p class="product-card__desc">A medida · Interior completo</p>
-											<div class="product-card__divider"></div>
-											<h3 class="product-card__name">Camperización Básica a medida</h3>
-					<span class="product-card__price">Precio a consultar</span>
-											
-										</div>
-									</article>
-									<article class="product-card" data-href="">
-										<div class="product-card__img-wrap">
-											<img src="../assets/img/Camper Standar.png" alt="Camperización Estándar">
-										</div>
-										<div class="product-card__info">
-											<p class="product-card__desc">A medida · Interior completo</p>
-											<div class="product-card__divider"></div>
-											<h3 class="product-card__name">Camperización Estándar</h3>
-					<span class="product-card__price">Precio a consultar</span>
-											
-										</div>
-									</article>
-									<article class="product-card" data-href="">
-										<div class="product-card__img-wrap">
-											<img src="../assets/img/Camper Premiu.png" alt="Camperización Premium">
-										</div>
-										<div class="product-card__info">
-											<p class="product-card__desc">A medida · Interior completo</p>
-											<div class="product-card__divider"></div>
-											<h3 class="product-card__name">Camperización Premium</h3>
-					<span class="product-card__price">Precio a consultar</span>
-											
-										</div>
-									</article>
+								<div class="photo-grid">
+									<div class="photo-grid__item"><img src="../assets/img/Camper.jpg" alt="Aislamiento"></div>
+									<div class="photo-grid__item"><img src="../assets/img/Camper.jpg" alt="Panelado"></div>
+									<div class="photo-grid__item"><img src="../assets/img/Camper.jpg" alt="Suelo"></div>
 								</div>
 							</div>
 						</div>
 					</li>
 
-					<!-- CATEGORÍA: MOBILIARIO -->
+					<!-- MOBILIARIO -->
 					<li class="cat-item">
 						<button class="cat-trigger" aria-expanded="false">
 							<span class="cat-trigger__name">Mobiliario</span>
-							<span class="cat-trigger__sub">Mesas · Estantes · Muebles a medida</span>
+							<span class="cat-trigger__sub">Cocina · Armarios · Cama</span>
 							<svg class="cat-trigger__arrow" viewBox="0 0 14 14" fill="none" stroke="#1D1D1F" stroke-width="2">
 								<line x1="7" y1="0" x2="7" y2="14"/><line x1="0" y1="7" x2="14" y2="7"/>
 							</svg>
 						</button>
 						<div class="cat-panel" role="region">
 							<div class="cat-panel__inner">
-								<div class="products-grid">
-									<article class="product-card" data-href="">
-										<div class="product-card__img-wrap">
-											<img src="../assets/img/imagen-portada-mobil.png" alt="Mesa de roble macizo">
-										</div>
-										<div class="product-card__info">
-											<p class="product-card__desc">Madera de aveto · Salón</p>
-											<div class="product-card__divider"></div>
-											<h3 class="product-card__name">Librería de madera de aveto</h3>
-					<span class="product-card__price">120 €</span>
-										</div>
-									</article>
-									<article class="product-card" data-href="">
-										<div class="product-card__img-wrap">
-											<img src="../assets/img/imagen-portada-mobil.png" alt="Estante flotante">
-										</div>
-										<div class="product-card__info">
-											<p class="product-card__desc">Madera maciza · Comedor</p>
-											<div class="product-card__divider"></div>
-											<h3 class="product-card__name">Silla de madera</h3>
-					<span class="product-card__price">Consultar</span>
-										</div>
-									</article>
-									<article class="product-card" data-href="">
-										<div class="product-card__img-wrap">
-											<img src="../assets/img/Tabla de corte sin fondo.png" alt="Tabla de cortar">
-										</div>
-										<div class="product-card__info">
-											<p class="product-card__desc">Pino macizo · Cocina</p>
-											<div class="product-card__divider"></div>
-											<h3 class="product-card__name">Tabla de cortar grande</h3>
-					<span class="product-card__price">60 €</span>
-										</div>
-									</article>
-									</div>
+								<div class="photo-grid">
+									<div class="photo-grid__item"><img src="../assets/img/Camper Vasica.png" alt="Cocina"></div>
+									<div class="photo-grid__item"><img src="../assets/img/Camper Vasica.png" alt="Armarios"></div>
+									<div class="photo-grid__item"><img src="../assets/img/Camper Vasica.png" alt="Cama"></div>
+								</div>
 							</div>
 						</div>
 					</li>
 
-					<!-- CATEGORÍA: DISEÑO A MEDIDA -->
+					<!-- SISTEMA ELÉCTRICO -->
 					<li class="cat-item">
 						<button class="cat-trigger" aria-expanded="false">
-							<span class="cat-trigger__name">Diseño a medida</span>
-							<span class="cat-trigger__sub">Piezas únicas · Encargos especiales</span>
+							<span class="cat-trigger__name">Sistema Eléctrico</span>
+							<span class="cat-trigger__sub">Luces · Cargadores · Claraboya · Placa solar</span>
 							<svg class="cat-trigger__arrow" viewBox="0 0 14 14" fill="none" stroke="#1D1D1F" stroke-width="2">
 								<line x1="7" y1="0" x2="7" y2="14"/><line x1="0" y1="7" x2="14" y2="7"/>
 							</svg>
 						</button>
 						<div class="cat-panel" role="region">
 							<div class="cat-panel__inner">
-								<div class="products-grid">
-									<article class="product-card" data-href="">
-										<div class="product-card__img-wrap">
-											<img src="../assets/img/imagen-portada-mobil.png" alt="Proyecto personalizado">
-										</div>
-										<div class="product-card__info">
-											<p class="product-card__desc">Madera maciza · Encargo único</p>
-											<div class="product-card__divider"></div>
-											<h3 class="product-card__name">Proyecto a medida</h3>
-					<span class="product-card__price">Consultar</span>
-										</div>
-									</article>
-									<article class="product-card" data-href="">
-										<div class="product-card__img-wrap" style="background:#F3F3F3;">
-										</div>
-										<div class="product-card__info">
-											<p class="product-card__desc">Madera maciza · Taller</p>
-											<div class="product-card__divider"></div>
-											<h3 class="product-card__name">Banco de trabajo</h3>
-					<span class="product-card__price">Consultar</span>
-										</div>
-									</article>
+								<div class="photo-grid">
+									<div class="photo-grid__item"><img src="../assets/img/Camper.jpg" alt="Luces"></div>
+									<div class="photo-grid__item"><img src="../assets/img/Camper.jpg" alt="Claraboya"></div>
+									<div class="photo-grid__item"><img src="../assets/img/Camper.jpg" alt="Placa solar"></div>
 								</div>
 							</div>
 						</div>
