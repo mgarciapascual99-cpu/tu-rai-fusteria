@@ -71,10 +71,10 @@
         height: auto;
       }
 
-      /* Fix section-work: prevent headline from absolute positioning causing duplication */
+      /* Fix section-work: hide the absolute-positioned headline, title goes inline in content */
       .section-work { margin-top: 0 !important; }
       .section-work::before { display: none !important; }
-      .section-work .section__headline { position: relative !important; top: auto !important; padding-top: 60px !important; margin-bottom: 20px; }
+      .section-work .section__headline { display: none !important; }
 
       /* Mobile fixes */
       @media (max-width: 767px) {
@@ -471,6 +471,9 @@
 	</div>
 
 	<div class="section__content">
+		<div style="text-align:center;padding:60px 0 20px;">
+			<img src="../assets/img/H2/PORTAFOLIOS_homogeneous_black_nobg.svg" alt="Portafolios" style="display:block;margin:0 auto;max-width:100%;width:260px;height:auto;">
+		</div>
 		<style>
 			/* ── NAV DE CATEGORÍAS ── */
 			.project-nav { list-style: none; padding: 0; margin: 0; }
