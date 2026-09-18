@@ -71,6 +71,11 @@
         height: auto;
       }
 
+      /* Fix section-work: prevent headline from absolute positioning causing duplication */
+      .section-work { margin-top: 0 !important; }
+      .section-work::before { display: none !important; }
+      .section-work .section__headline { position: relative !important; top: auto !important; padding-top: 60px !important; margin-bottom: 20px; }
+
       /* Mobile fixes */
       @media (max-width: 767px) {
         .quienes-somos-img {
