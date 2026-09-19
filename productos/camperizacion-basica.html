@@ -626,7 +626,7 @@
 			<div class="column--m--12of12 gutter--s--2">
 
 				<style>
-					.portfolio-gallery { display: grid; gap: 3rem 0; padding: 2rem 0 4rem; }
+					.portfolio-gallery { display: grid; gap: 5rem 0; padding: 2rem 0 5rem; }
 
 					.portfolio-category__label {
 						font-family: 'Raleway', sans-serif;
@@ -635,7 +635,7 @@
 						letter-spacing: .25em;
 						text-transform: uppercase;
 						color: #1D1D1F;
-						margin: 0 0 .4rem;
+						margin: 0 0 .3rem;
 					}
 					.portfolio-category__sub {
 						font-family: 'Lora', Georgia, serif;
@@ -644,64 +644,93 @@
 						color: #bbb;
 						margin: 0 0 1.2rem;
 					}
-					.portfolio-category__grid {
-						display: grid;
-						grid-template-columns: repeat(3, 1fr);
-						gap: .75rem;
-					}
-					@media (max-width: 600px) {
-						.portfolio-category__grid { grid-template-columns: repeat(2, 1fr); }
-					}
-					.portfolio-category__grid figure {
+					.portfolio-category figure {
 						margin: 0;
 						overflow: hidden;
 						border-radius: 10px;
 						background: #f3f3f3;
 					}
-					.portfolio-category__grid figure:first-child {
-						grid-column: span 2;
-						aspect-ratio: 16/9;
-					}
-					.portfolio-category__grid figure:not(:first-child) {
-						aspect-ratio: 4/3;
-					}
-					.portfolio-category__grid figure img {
+					.portfolio-category figure img {
 						width: 100%;
 						height: 100%;
 						object-fit: cover;
 						display: block;
 					}
+
+					/* Layout A: gran izquierda + 2 apiladas derecha */
+					.layout-a {
+						display: grid;
+						grid-template-columns: 2fr 1fr;
+						grid-template-rows: 1fr 1fr;
+						gap: .75rem;
+						height: 480px;
+					}
+					.layout-a figure:first-child { grid-row: span 2; }
+
+					/* Layout B: 2 apiladas izquierda + gran derecha (espejo) */
+					.layout-b {
+						display: grid;
+						grid-template-columns: 1fr 2fr;
+						grid-template-rows: 1fr 1fr;
+						gap: .75rem;
+						height: 480px;
+					}
+					.layout-b figure:last-child { grid-row: span 2; grid-column: 2; grid-row-start: 1; }
+
+					/* Layout C: panorámica arriba + 2 abajo */
+					.layout-c {
+						display: grid;
+						grid-template-columns: 1fr 1fr;
+						grid-template-rows: 1.4fr 1fr;
+						gap: .75rem;
+						height: 480px;
+					}
+					.layout-c figure:first-child { grid-column: span 2; }
+
+					@media (max-width: 700px) {
+						.layout-a, .layout-b, .layout-c {
+							grid-template-columns: 1fr;
+							grid-template-rows: unset;
+							height: auto;
+						}
+						.layout-a figure:first-child,
+						.layout-b figure:last-child,
+						.layout-c figure:first-child { grid-row: unset; grid-column: unset; aspect-ratio: 16/9; }
+						.layout-a figure:not(:first-child),
+						.layout-b figure:not(:last-child),
+						.layout-c figure:not(:first-child) { aspect-ratio: 4/3; }
+					}
 				</style>
 
 				<div class="portfolio-gallery">
 
-					<!-- TECHOS Y PAREDES -->
+					<!-- TECHOS Y PAREDES — Layout A: gran izq + 2 apiladas der -->
 					<div class="portfolio-category">
 						<p class="portfolio-category__label">Techos y Paredes</p>
 						<p class="portfolio-category__sub">Aislamiento · Suelo · Panelado</p>
-						<div class="portfolio-category__grid">
+						<div class="layout-a">
 							<figure><img src="../assets/img/Camper.jpg" alt="Aislamiento"></figure>
 							<figure><img src="../assets/img/Camper.jpg" alt="Panelado"></figure>
 							<figure><img src="../assets/img/Camper.jpg" alt="Suelo"></figure>
 						</div>
 					</div>
 
-					<!-- MOBILIARIO -->
+					<!-- MOBILIARIO — Layout B: 2 apiladas izq + gran der -->
 					<div class="portfolio-category">
 						<p class="portfolio-category__label">Mobiliario</p>
 						<p class="portfolio-category__sub">Cocina · Armarios · Cama</p>
-						<div class="portfolio-category__grid">
+						<div class="layout-b">
 							<figure><img src="../assets/img/Camper Vasica.png" alt="Cocina"></figure>
 							<figure><img src="../assets/img/Camper Vasica.png" alt="Armarios"></figure>
 							<figure><img src="../assets/img/Camper Vasica.png" alt="Cama"></figure>
 						</div>
 					</div>
 
-					<!-- SISTEMA ELÉCTRICO -->
+					<!-- SISTEMA ELÉCTRICO — Layout C: panorámica + 2 abajo -->
 					<div class="portfolio-category">
 						<p class="portfolio-category__label">Sistema Eléctrico</p>
 						<p class="portfolio-category__sub">Luces · Cargadores · Claraboya · Placa solar</p>
-						<div class="portfolio-category__grid">
+						<div class="layout-c">
 							<figure><img src="../assets/img/Camper.jpg" alt="Luces"></figure>
 							<figure><img src="../assets/img/Camper.jpg" alt="Claraboya"></figure>
 							<figure><img src="../assets/img/Camper.jpg" alt="Placa solar"></figure>
