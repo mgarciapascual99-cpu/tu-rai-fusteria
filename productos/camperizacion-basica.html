@@ -623,25 +623,49 @@
 		</style>
 
 		<div class="row max-width--1200 horizontal-align--m--center">
-			<div class="column--m--8of12 column-offset--m--2of12 gutter--s--1">
+			<div class="column--m--12of12 gutter--s--2">
 
 				<style>
-					.photo-grid {
+					.portfolio-gallery { display: grid; gap: 3rem 0; padding: 2rem 0 4rem; }
+
+					.portfolio-category__label {
+						font-family: 'Raleway', sans-serif;
+						font-size: .6rem;
+						font-weight: 700;
+						letter-spacing: .25em;
+						text-transform: uppercase;
+						color: #1D1D1F;
+						margin: 0 0 .4rem;
+					}
+					.portfolio-category__sub {
+						font-family: 'Lora', Georgia, serif;
+						font-size: .85rem;
+						font-style: italic;
+						color: #bbb;
+						margin: 0 0 1.2rem;
+					}
+					.portfolio-category__grid {
 						display: grid;
 						grid-template-columns: repeat(3, 1fr);
-						gap: 0.75rem;
-						padding: 0.5rem 0 1.5rem;
+						gap: .75rem;
 					}
 					@media (max-width: 600px) {
-						.photo-grid { grid-template-columns: repeat(2, 1fr); }
+						.portfolio-category__grid { grid-template-columns: repeat(2, 1fr); }
 					}
-					.photo-grid__item {
-						aspect-ratio: 4/3;
+					.portfolio-category__grid figure {
+						margin: 0;
 						overflow: hidden;
 						border-radius: 10px;
 						background: #f3f3f3;
 					}
-					.photo-grid__item img {
+					.portfolio-category__grid figure:first-child {
+						grid-column: span 2;
+						aspect-ratio: 16/9;
+					}
+					.portfolio-category__grid figure:not(:first-child) {
+						aspect-ratio: 4/3;
+					}
+					.portfolio-category__grid figure img {
 						width: 100%;
 						height: 100%;
 						object-fit: cover;
@@ -649,69 +673,42 @@
 					}
 				</style>
 
-				<ul class="project-nav">
+				<div class="portfolio-gallery">
 
 					<!-- TECHOS Y PAREDES -->
-					<li class="cat-item">
-						<button class="cat-trigger" aria-expanded="false">
-							<span class="cat-trigger__name">Techos y Paredes</span>
-							<span class="cat-trigger__sub">Aislamiento · Suelo · Panelado</span>
-							<svg class="cat-trigger__arrow" viewBox="0 0 14 14" fill="none" stroke="#1D1D1F" stroke-width="2">
-								<line x1="7" y1="0" x2="7" y2="14"/><line x1="0" y1="7" x2="14" y2="7"/>
-							</svg>
-						</button>
-						<div class="cat-panel" role="region">
-							<div class="cat-panel__inner">
-								<div class="photo-grid">
-									<div class="photo-grid__item"><img src="../assets/img/Camper.jpg" alt="Aislamiento"></div>
-									<div class="photo-grid__item"><img src="../assets/img/Camper.jpg" alt="Panelado"></div>
-									<div class="photo-grid__item"><img src="../assets/img/Camper.jpg" alt="Suelo"></div>
-								</div>
-							</div>
+					<div class="portfolio-category">
+						<p class="portfolio-category__label">Techos y Paredes</p>
+						<p class="portfolio-category__sub">Aislamiento · Suelo · Panelado</p>
+						<div class="portfolio-category__grid">
+							<figure><img src="../assets/img/Camper.jpg" alt="Aislamiento"></figure>
+							<figure><img src="../assets/img/Camper.jpg" alt="Panelado"></figure>
+							<figure><img src="../assets/img/Camper.jpg" alt="Suelo"></figure>
 						</div>
-					</li>
+					</div>
 
 					<!-- MOBILIARIO -->
-					<li class="cat-item">
-						<button class="cat-trigger" aria-expanded="false">
-							<span class="cat-trigger__name">Mobiliario</span>
-							<span class="cat-trigger__sub">Cocina · Armarios · Cama</span>
-							<svg class="cat-trigger__arrow" viewBox="0 0 14 14" fill="none" stroke="#1D1D1F" stroke-width="2">
-								<line x1="7" y1="0" x2="7" y2="14"/><line x1="0" y1="7" x2="14" y2="7"/>
-							</svg>
-						</button>
-						<div class="cat-panel" role="region">
-							<div class="cat-panel__inner">
-								<div class="photo-grid">
-									<div class="photo-grid__item"><img src="../assets/img/Camper Vasica.png" alt="Cocina"></div>
-									<div class="photo-grid__item"><img src="../assets/img/Camper Vasica.png" alt="Armarios"></div>
-									<div class="photo-grid__item"><img src="../assets/img/Camper Vasica.png" alt="Cama"></div>
-								</div>
-							</div>
+					<div class="portfolio-category">
+						<p class="portfolio-category__label">Mobiliario</p>
+						<p class="portfolio-category__sub">Cocina · Armarios · Cama</p>
+						<div class="portfolio-category__grid">
+							<figure><img src="../assets/img/Camper Vasica.png" alt="Cocina"></figure>
+							<figure><img src="../assets/img/Camper Vasica.png" alt="Armarios"></figure>
+							<figure><img src="../assets/img/Camper Vasica.png" alt="Cama"></figure>
 						</div>
-					</li>
+					</div>
 
 					<!-- SISTEMA ELÉCTRICO -->
-					<li class="cat-item">
-						<button class="cat-trigger" aria-expanded="false">
-							<span class="cat-trigger__name">Sistema Eléctrico</span>
-							<span class="cat-trigger__sub">Luces · Cargadores · Claraboya · Placa solar</span>
-							<svg class="cat-trigger__arrow" viewBox="0 0 14 14" fill="none" stroke="#1D1D1F" stroke-width="2">
-								<line x1="7" y1="0" x2="7" y2="14"/><line x1="0" y1="7" x2="14" y2="7"/>
-							</svg>
-						</button>
-						<div class="cat-panel" role="region">
-							<div class="cat-panel__inner">
-								<div class="photo-grid">
-									<div class="photo-grid__item"><img src="../assets/img/Camper.jpg" alt="Luces"></div>
-									<div class="photo-grid__item"><img src="../assets/img/Camper.jpg" alt="Claraboya"></div>
-									<div class="photo-grid__item"><img src="../assets/img/Camper.jpg" alt="Placa solar"></div>
-								</div>
-							</div>
+					<div class="portfolio-category">
+						<p class="portfolio-category__label">Sistema Eléctrico</p>
+						<p class="portfolio-category__sub">Luces · Cargadores · Claraboya · Placa solar</p>
+						<div class="portfolio-category__grid">
+							<figure><img src="../assets/img/Camper.jpg" alt="Luces"></figure>
+							<figure><img src="../assets/img/Camper.jpg" alt="Claraboya"></figure>
+							<figure><img src="../assets/img/Camper.jpg" alt="Placa solar"></figure>
 						</div>
-					</li>
+					</div>
 
-				</ul>
+				</div>
 
 			</div>
 		</div>
